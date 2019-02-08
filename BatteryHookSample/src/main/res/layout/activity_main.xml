@@ -8,28 +8,79 @@
     tools:context="com.sample.battery.MainActivity">
 
     <Button
-            android:id="@+id/hook_alarm"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="hook alarm"/>
+        android:id="@+id/hook_alarm"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="hook alarm"/>
 
     <Button
-            android:id="@+id/hook_wakelock"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentLeft="true"
-            android:layout_alignParentStart="true"
-            android:layout_below="@+id/test_gc"
-            android:text="hook wakelock"/>
+        android:id="@+id/hook_wakelock"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="hook wakelock"/>
 
     <Button
-            android:id="@+id/hook_gps"
+        android:id="@+id/hook_gps"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="hook gps"/>
+
+
+
+    <RelativeLayout
+        android:layout_marginTop="50dp"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+
+        <Button
+            android:id="@+id/wakelock_acquire"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_alignParentLeft="true"
-            android:layout_alignParentStart="true"
-            android:layout_below="@+id/test_io"
-            android:text="hook gps"/>
+            android:text="wakelock acquire"/>
+
+        <Button
+            android:layout_toRightOf="@id/wakelock_acquire"
+            android:layout_marginLeft="20dp"
+            android:id="@+id/wakelock_release"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="wakelock release"/>
+
+        <Button
+            android:layout_below="@id/wakelock_acquire"
+            android:id="@+id/alarm_set"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="alarm set"/>
+
+        <Button
+            android:layout_below="@id/wakelock_acquire"
+            android:layout_toRightOf="@id/alarm_set"
+            android:layout_marginLeft="20dp"
+            android:id="@+id/alarm_cancel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="alarm cancel"/>
+
+
+        <Button
+            android:layout_below="@id/alarm_set"
+            android:id="@+id/gps_request"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="gps request"/>
+
+        <Button
+            android:layout_below="@id/alarm_set"
+            android:layout_toRightOf="@id/gps_request"
+            android:layout_marginLeft="20dp"
+            android:id="@+id/gps_remove"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="gps remove"/>
+    </RelativeLayout>
 
 </LinearLayout>
 
